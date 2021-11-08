@@ -12,6 +12,7 @@ public class test {
 		int a = Integer.parseInt(br.readLine());
 		
 		System.out.println(a);
+		System.out.println(a);
 	}
 
 }
