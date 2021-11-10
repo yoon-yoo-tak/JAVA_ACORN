@@ -9,8 +9,6 @@ public class Quiz3 {
 		Scanner sc = new Scanner(System.in);
 		int totaltime = 230; // 음악길이
 		int N;
-//		System.out.println("초를 입력하세요?");
-//		int N = sc.nextInt();
 		for(;;) {
 			System.out.println("플레이된 초를 입력하세요?");
 			
@@ -23,30 +21,27 @@ public class Quiz3 {
 		}
 		
 		double percent = (double)N/(double)totaltime*100; // 퍼센트값
+		String top = "┌──────────┐\n";
+		String mid  = "│";
+		String bottom = "\n└──────────┘";
 		
-		String s  = "│";
 		
-		System.out.println("┌──────────┐");
 		
 		for(int i = 0;i<(int)percent/10;i++) {
-			s +='■';
+			mid +='■';
 		}
 		
-		s +=(int)percent + "%";
+		mid +=(int)percent + "%";
 		
-		if(s.length()<11) {
-			while(s.length()<11) {
-				s+=" ";
+		if(mid.length()<11) {
+			while(mid.length()<11) {
+				mid+=" ";
 			}
-			System.out.println(s + "│");	
+			System.out.println(top + mid + "│" + bottom);	
 		}else {
-			System.out.println(s);
+			System.out.println(top + mid + bottom);
 		}
-		
-		
-		System.out.println("└──────────┘");
-		
-		
+					
 		sc.close();
 	
 	}
